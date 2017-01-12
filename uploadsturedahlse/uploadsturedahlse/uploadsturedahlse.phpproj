@@ -18,18 +18,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="index.php" />
-    <Compile Include="phpuploader\ajaxuploaderhandler.php" />
-    <Compile Include="phpuploader\ajaxuploaderresource.php" />
-    <Compile Include="phpuploader\include_phpuploader.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="js\" />
-    <Folder Include="phpuploader\" />
     <Folder Include="uploads\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="043b7026.png" />
+    <Content Include="asfalt.png" />
     <Content Include="css\styles.css" />
     <Content Include="js\myjs.js" />
+    <Content Include="bock.png" />
   </ItemGroup>
 </Project>

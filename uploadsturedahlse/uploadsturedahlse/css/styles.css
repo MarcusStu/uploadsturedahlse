@@ -1,2 +1,121 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body {
+    margin: 0;
+    padding: 0;
+    /*background-color: #1e1e1e;*/
+    /*background-image: url('../asfalt.png');*/
+    background-image: url('../043b7026.png');
+    color: #FFF;
+    font-family: 'Comfortaa', cursive;
+}
+
+#footer_div {
+    padding: 6px;
+    text-align: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fileuploadholder {
+    width: 400px;
+    height: 200px;
+    margin: 60px auto 0px auto;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 15px;
+    padding: 6px;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fileuploadedbox {
+    width: 400px;
+    height: 200px;
+    margin: 60px auto 0px auto;
+    margin-top: 10px;
+    border: 0px solid #808080;
+    border-radius: 15px;
+    padding: 6px;
+    text-align: center;
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shadow {
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+/*.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile, label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+    .inputfile:focus + label,
+    .inputfile + label:hover {
+        background-color: red;
+    }
+
+.inputfile, label {
+    cursor: pointer; /* "hand" cursor
+}*/
+
+/*label {
+    border: 1px solid white;
+    border-color: #2e6da4;
+    padding: 5px;
+    font-weight: lighter;
+    border-radius: 5px;
+    background-color: #337ab7;
+}*/
+
+/*#label_choose:hover {
+    background-color: #286090;
+    border-color: #204d74;
+}*/
+
+#UploadButton {
+    margin-top: 30px;
+    height: 60px;
+    width: 50%;
+}
+
+#upload_link {
+    background-color: transparent;
+    font-size: 12px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+#copy-button {
+    margin-top: 5px;
+}
+
+#browse_btn {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
 }
