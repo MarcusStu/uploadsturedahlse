@@ -57,13 +57,8 @@ session_start();
 </head>
 <body>    
 
-<div class="fileuploadholder shadow">
+<div id="fileuploadholder" class="fileuploadholder shadow col-sm-4 col-xs-6 col-centered">
 <form action="index.php" method="post" enctype="multipart/form-data" name="FileUploadForm" id="FileUploadForm">
-<!--<label id="label_choose" for="UploadFileField"><span class="fa fa-upload"></span> Choose File..</label>
-
-<input class="inputfile" type="file" name="UploadFileField" id="UploadFileField" data-multiple-caption="{count} files selected" multiple required />
--->
-
             <div id="browse_btn" class="input-group">
                 <label class="input-group-btn">
                     <span class="btn btn-primary">
@@ -72,10 +67,9 @@ session_start();
                 </label>
                 <input type="text" class="form-control" readonly>
             </div>
-        
-
-
 <input class="form-control btn btn-primary" type="submit" name="UploadButton" id="UploadButton" value="Upload" />
+</form>
+<button style="margin-top:5px;" class="btn btn-success btn-xs" id="browse_uploads_btn" name="browse_uploads_btn">Browse Uploads</button>
 <div id="upload_info_text">
 <small><img src="bock.png" /> max <text style="color:#00ff00;">200 MB</text></small>
 <br />
@@ -83,7 +77,7 @@ session_start();
 </div>
 </div>
 
-<div class="fileuploadedbox">
+<div id="fileuploadedbox" class="fileuploadedbox col-sm-4 col-xs-6 col-centered">
 
 <?php
     if (isset($_SESSION['message_uploadtoobig'])) {
@@ -117,9 +111,37 @@ session_start();
 
 </div>
 
-<div id="footer_div" class="footer">
-<p>&copy; 2016-<?php echo date("Y"); ?> Marcus Sturedahl Designs</p>
+<div id="uploaded_files_list_div" class="col-sm-4 col-xs-6 col-centered">
+<table style='width:100%'>
+  <tr>
+    <th style="text-align:left">Filename</th>
+    <th style="text-align:right">Date Uploaded</th>
+  </tr>
+<?php
+$dir = "uploads/";
+chdir($dir);
+array_multisort(array_map('filemtime', ($files = glob("*.*"))), SORT_DESC, $files);
+foreach($files as $filename)
+{
+    //echo "<a target='_blank' href='$dir$filename'>$filename</a> - "  . date ("F d, Y - H:m:s", fileatime($filename)) . "<br />";
+    echo "<tr style='border-bottom: 1px solid white;'>
+    <td style='text-align: left;'><a target='_blank' href='$dir$filename'>$filename</a></td>
+    <td style='text-align: right;'><small>" . date ("F d, Y - H:m:s", filemtime($filename)) . "</small></td>
+  </tr>";
+}
+?>
+</table>
 </div>
+
+
+
+
+
+<footer class="footer" style="text-align: center;">
+      <div class="container">
+        <p>&copy; 2016-<?php echo date("Y"); ?> Marcus Sturedahl Designs</p>
+      </div>
+    </footer>
 
 
 

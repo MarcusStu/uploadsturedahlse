@@ -69,3 +69,9 @@ $(function () {
     });
 
 });
+
+// Browse Uploads Button, Toggle hide/show div content
+$("#uploaded_files_list_div").hide();
+$("#browse_uploads_btn").click(function () {
+    $("#uploaded_files_list_div").toggle();
+});
