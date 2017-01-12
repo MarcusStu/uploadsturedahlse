@@ -110,9 +110,9 @@ function completeHandler(event) {
 }
 
 function errorHandler(event) {
-    _("status").innerHTML = "Upload Failed";
+    _("status").innerHTML = "Upload Failed, try again.";
 }
 
 function abortHandler(event) {
-    _("status").innerHTML = "Upload Aborted";
+    _("status").innerHTML = "Upload Aborted.";
 }

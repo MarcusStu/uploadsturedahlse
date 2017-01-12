@@ -132,7 +132,7 @@ foreach($files as $filename)
     //echo "<a target='_blank' href='$dir$filename'>$filename</a> - "  . date ("F d, Y - H:m:s", fileatime($filename)) . "<br />";
     echo "<tr style='border-bottom: 1px solid white;'>
     <td style='text-align: left;'><a target='_blank' href='$dir$filename'>$filename</a></td>
-    <td style='text-align: right;'><small>" . date ("F d, Y - H:m:s", filemtime($filename)) . "</small></td>
+    <td style='text-align: right;'><small>" . date ("F d, Y", filemtime($filename)) . "</small></td>
   </tr>";
 }
 ?>

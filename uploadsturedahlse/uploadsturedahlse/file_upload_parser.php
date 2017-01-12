@@ -10,10 +10,10 @@ if (!$fileTmpLoc) { //if file not chosen
         exit();
 }
 
-if (move_uploaded_file($fileTmpLoc, "uploads/$fileName")) {
-        echo "$fileName upload is complete. Please wait for the unique URL..";
-} else {
-        echo "move_uploaded_file function failed";
-}
+//if (move_uploaded_file($fileTmpLoc, "uploads/$fileName")) {
+//        echo "$fileName upload is complete. Please wait for the unique URL..";
+//} else {
+//        echo "move_uploaded_file function failed";
+//}
 
 ?>
