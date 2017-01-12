@@ -58,7 +58,7 @@ session_start();
 <body>    
 
 <div id="fileuploadholder" class="fileuploadholder shadow col-sm-4 col-xs-6 col-centered">
-<form action="index.php" method="post" enctype="multipart/form-data" name="FileUploadForm" id="FileUploadForm">
+<form action="" method="post" enctype="multipart/form-data" name="FileUploadForm" id="upload_form">
             <div id="browse_btn" class="input-group">
                 <label class="input-group-btn">
                     <span class="btn btn-primary">
@@ -67,12 +67,18 @@ session_start();
                 </label>
                 <input type="text" class="form-control" readonly>
             </div>
-<input class="form-control btn btn-primary" type="submit" name="UploadButton" id="UploadButton" value="Upload" />
+<input class="form-control btn btn-primary" type="submit" name="UploadButton" id="UploadButton" value="Upload" onclick="uploadFile()" />
+
+<!-- The Progress Bar -->
+<br />
+<progress id="progressBar" value="0" max="100" style="width:200px;margin-top:5px;"></progress>
+<h4 id="status"></h3>
+<!--<p id="loaded_n_total"></p>-->
+
 </form>
 <button style="margin-top:5px;" class="btn btn-success btn-xs" id="browse_uploads_btn" name="browse_uploads_btn">Browse Uploads</button>
 <div id="upload_info_text">
-<small><img src="bock.png" /> max <text style="color:#00ff00;">200 MB</text></small>
-<br />
+<small><img src="bock.png" /> max <text style="color:#00ff00;">200 MB</text> | </small>
 <small><img src="bock.png" /> all file types allowed</small>
 </div>
 </div>

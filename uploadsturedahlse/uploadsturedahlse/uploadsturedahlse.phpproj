@@ -17,6 +17,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="file_upload_parser.php" />
     <Compile Include="index.php" />
   </ItemGroup>
   <ItemGroup>
